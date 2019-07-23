@@ -1,52 +1,64 @@
 package com.colo.buscaproducto.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Date;
 
 public class Producto {
 
-    private int codigo;
-    private String nombre;
-    private double precio;
-    private String descripcion;
+    private int idProducto;
+
+    @SerializedName("nombre")
+    private String nombreProducto;
+
+    @SerializedName("precio")
+    private double precioProducto;
+
+/*    private String descripcion;
     private Date fechaAlta;
     private String categoria;
     private boolean descatalogado;
+*/
 
     public Producto() {  }
 
-    public Producto(int codigo, String nombre, double precio, String descripcion, Date fechaAlta) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.descripcion = descripcion;
-        this.fechaAlta = fechaAlta;
+//    public Producto(int codigo, String nombre, double precio, String descripcion, Date fechaAlta) {
+    public Producto(int codigo, String nombre, double precio) {
+
+        this.idProducto = codigo;
+        this.nombreProducto = nombre;
+        this.precioProducto = precio;
+        //this.descripcion = descripcion;
+        //this.fechaAlta = fechaAlta;
+
     }
 
-    public int getCodigo() {
-        return codigo;
+    public int getIdProducto() {
+        return idProducto;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setIdProducto(int codigo) {
+        this.idProducto = codigo;
     }
 
     public String getNombre() {
-        return nombre;
+        return nombreProducto;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nombreProducto = nombre;
     }
 
     public double getPrecio() {
-        return precio;
+        return precioProducto;
     }
 
     public void setPrecio(double precio) {
-        this.precio = precio;
+        this.precioProducto = precio;
     }
 
-    public String getDescripcion() {
+/*
+     public String getDescripcion() {
         return descripcion;
     }
 
@@ -77,4 +89,5 @@ public class Producto {
     public void setDescatalogado(boolean descatalogado) {
         this.descatalogado = descatalogado;
     }
+*/
 }

@@ -6,7 +6,7 @@ public class LineaPedido {
     private int cantidad;
     private double precio;
 
-    public LineaPedido(){  }
+    public LineaPedido(){ }
 
     public LineaPedido(Producto producto, int cantidad, double precio) {
         this.producto = producto;

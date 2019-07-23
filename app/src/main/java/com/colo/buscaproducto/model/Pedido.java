@@ -8,18 +8,19 @@ public class Pedido {
     private Long id;
     private Date fecha;
     private int mesa;
-    private Camarero camarero;
+    //private Camarero camarero;
 
     private List<LineaPedido> lineasPedido;
 
     public Pedido() {
     }
 
-    public Pedido(Long id, Date fecha, int mesa, Camarero camarero, List<LineaPedido> lineasPedido) {
+   // public Pedido(Long id, Date fecha, int mesa, Camarero camarero, List<LineaPedido> lineasPedido) {
+     public Pedido(Long id, Date fecha, int mesa, List<LineaPedido> lineasPedido) {
         this.id = id;
         this.fecha = fecha;
         this.mesa = mesa;
-        this.camarero = camarero;
+      //  this.camarero = camarero;
         this.lineasPedido = lineasPedido;
     }
 
@@ -48,13 +49,13 @@ public class Pedido {
         this.mesa = mesa;
     }
 
-    public Camarero getCamarero() {
-        return camarero;
-    }
+   // public Camarero getCamarero() {
+   // return camarero;
+   // }
 
-    public void setCamarero(Camarero camarero) {
-        this.camarero = camarero;
-    }
+    //public void setCamarero(Camarero camarero) {
+    //    this.camarero = camarero;
+    //}
 
     public List<LineaPedido> getLineasPedido() {
         return lineasPedido;
@@ -70,7 +71,7 @@ public class Pedido {
                 "id=" + id +
                 ", fecha=" + fecha +
                 ", mesa=" + mesa +
-                ", camarero=" + camarero +
+      //          ", camarero=" + camarero +
                 ", lineasPedido=" + lineasPedido +
                 '}';
     }
