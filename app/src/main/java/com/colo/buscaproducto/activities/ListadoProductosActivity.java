@@ -23,7 +23,7 @@ public class ListadoProductosActivity extends AppCompatActivity {
     private TextView textViewResult;
     private TextView textProducto;
     private TextView textNombreProducto;
-    private TextView textPrecio;
+    private TextView textCategoria;
     private JsonPlaceHolderApi jsonPlaceHolderApi;
 
     @Override
@@ -34,7 +34,7 @@ public class ListadoProductosActivity extends AppCompatActivity {
         textViewResult = (TextView) findViewById(R.id.idTextViewProductos);
         textProducto = (TextView) findViewById(R.id.idProducto);
         textNombreProducto = (TextView) findViewById(R.id.idNombreProducto);
-        textPrecio = (TextView) findViewById(R.id.idPrecioProducto);
+        textCategoria = (TextView) findViewById(R.id.idCategoriaProducto);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://pedi-gest.herokuapp.com/api/")
@@ -63,12 +63,11 @@ public class ListadoProductosActivity extends AppCompatActivity {
                     content += "Nombre: " + producto.getNombre() + "\n\n";
                     */
 
-                    String content = Integer.toString(producto.getIdProducto());
+                    String content = Integer.toString(producto.getId());
                     //textViewResult.append(content);
                     textProducto.append(content);
                     textNombreProducto.append(producto.getNombre());
-                    textPrecio.append(Double.toString(producto.getPrecio()));
-
+       //error de tipo             //textCategoria.append(producto.getCategoria());
 
                 }
 

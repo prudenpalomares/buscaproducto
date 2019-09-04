@@ -1,8 +1,6 @@
 package com.colo.buscaproducto.model;
 
-import com.google.gson.annotations.SerializedName;
-
-
+//import com.google.gson.annotations.SerializedName;
 import java.util.Date;
 
 public class PrecioSupermercado {
@@ -12,28 +10,22 @@ public class PrecioSupermercado {
     private Double precio;
     private Date fecha;
 
-//    @SerializedName("nombre")
-//    private String nombreProducto;
-//    @SerializedName("precio")
-//    private double precioProducto;
+    //CONSTRUCTOR
+    public PrecioSupermercado() {   }
 
-
-    public PrecioSupermercado() {
-    }
-
-    public PrecioSupermercado(Producto producto, Supermercado supermercado, double precio, Date fecha) {
-
+    public PrecioSupermercado(Producto producto, Supermercado supermercado, double precio, Date fecha)
+    {
         this.producto = producto;
         this.supermercado = supermercado;
         this.precio = precio;
         this.fecha = fecha;
-
     }
+
+    //METODOS
 
     public int getProducto() {
-        return producto.getIdProducto();
+        return producto.getId();
     }
-
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
@@ -41,7 +33,6 @@ public class PrecioSupermercado {
     public Supermercado getSupermercado() {
         return supermercado;
     }
-
     public void setSupermercado(Supermercado supermercado) {
         this.supermercado = supermercado;
     }
@@ -49,17 +40,15 @@ public class PrecioSupermercado {
     public double getPrecio() {
         return this.precio;
     }
-
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
-
     public Date getFecha() {
         return fecha;
     }
-
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
+
 }
