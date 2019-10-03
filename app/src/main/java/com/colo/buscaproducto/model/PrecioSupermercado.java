@@ -10,22 +10,21 @@ public class PrecioSupermercado {
     private Double precio;
     private Date fecha;
 
-    //CONSTRUCTOR
-    public PrecioSupermercado() {   }
+    public PrecioSupermercado() {
 
-    public PrecioSupermercado(Producto producto, Supermercado supermercado, double precio, Date fecha)
-    {
+    }
+
+    public PrecioSupermercado(Producto producto, Supermercado supermercado, double precio, Date fecha) {
         this.producto = producto;
         this.supermercado = supermercado;
         this.precio = precio;
         this.fecha = fecha;
     }
 
-    //METODOS
-
     public int getProducto() {
         return producto.getId();
     }
+
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
@@ -33,6 +32,7 @@ public class PrecioSupermercado {
     public Supermercado getSupermercado() {
         return supermercado;
     }
+
     public void setSupermercado(Supermercado supermercado) {
         this.supermercado = supermercado;
     }
@@ -40,6 +40,7 @@ public class PrecioSupermercado {
     public double getPrecio() {
         return this.precio;
     }
+
     public void setPrecio(double precio) {
         this.precio = precio;
     }
@@ -47,8 +48,18 @@ public class PrecioSupermercado {
     public Date getFecha() {
         return fecha;
     }
+
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
+    @Override
+    public String toString() {
+        return "PrecioSupermercado{" +
+                "producto=" + producto +
+                ", supermercado=" + supermercado +
+                ", precio=" + precio +
+                ", fecha=" + fecha +
+                '}';
+    }
 }

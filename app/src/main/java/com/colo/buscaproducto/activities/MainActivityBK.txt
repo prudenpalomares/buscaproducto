@@ -1,0 +1,81 @@
+package com.colo.buscaproducto.activities;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.colo.buscaproducto.R;
+import com.colo.buscaproducto.sqlite.DatabaseHelper;
+
+public class MainActivityBK extends AppCompatActivity {
+
+    DatabaseHelper myDB;
+    int codigo;
+    EditText et1;
+    Button btn1;
+    Button btn2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_listado_productos);
+
+        Log.d("***","En onCreate de MainActivity");
+
+        et1 = (EditText) findViewById(R.id.idBuscaProducto);
+        btn1 = (Button) findViewById(R.id.btnBuscar);
+        btn2 = (Button) findViewById(R.id.btnListar);
+
+        myDB= new DatabaseHelper(this);
+
+        btn1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+                int codigo = 1;
+                String nombre = et1.getText().toString();
+
+                /*String nombrecompleto = apellido1 + " " + apellido2 + " " + nombre;
+                Toast.makeText(MainActivity.this, nombrecompleto, Toast.LENGTH_LONG).show();
+                */
+        //        myDB.insertData(codigo, nombre, null);
+
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+          //     Cursor cursor = myDB.getAll();
+                if (cursor == null || cursor.getCount() == 0) {
+                    return;
+                }
+
+                while (cursor.moveToNext()){
+                    int codigo = cursor.getInt(0);
+                    String nombre = cursor.getString(1);
+                    //Categoria categoria = cursor.getString(2);
+                    Log.d("*****",nombre + " " + codigo);
+                }
+
+            }
+        });
+
+        */
+
+
+//        lista = (ListView) findViewById(R.id.idLista);
+//        Adaptador adaptador = new Adaptador (this);
+//        lista.setAdapter(adaptador);
+
+/*        Intent intent = null;
+        intent = new Intent(this, ListadoProductosActivity.class);
+        startActivity(intent);
+*/
+
+    }
+}

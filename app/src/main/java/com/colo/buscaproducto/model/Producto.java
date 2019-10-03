@@ -8,7 +8,6 @@ public class Producto {
     private String nombre;
     private Categoria categoria;
 
-    //CONSTRUCTOR
     public Producto() {    }
 
     public Producto(int codigo, String nombre, Categoria categoria) {
@@ -18,15 +17,29 @@ public class Producto {
         this.categoria = categoria;
     }
 
-    //METODOS
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id;  }
+    public int getId() {
+        return id;
+    }
 
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public Categoria getCategoria() { return categoria; }
-    public void setCategoria(Categoria categoria) { this.categoria = categoria; }
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
     @Override
     public String toString() {
@@ -36,5 +49,4 @@ public class Producto {
                 ", categoria=" + categoria +
                 '}';
     }
-
 }
