@@ -1,4 +1,4 @@
-Objetivo:
+# Objetivo:
 
 La aplicación surge de la necesidad de encontrar donde comprar un producto con mejor precio (salvo producto
 predilecto), en el supermercado mas cercano.
