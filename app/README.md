@@ -23,7 +23,16 @@ Además de lo dicho en la sección Objetivo, la idea futura sería añadir un re
 gestionar que necesitaremos y donde comprarlo a mejor precio, a lo largo de todo un mes. Esta información
 se podría compartir con otros usuarios.
 
-Pantallazos:
+# Pantallazos:
+
+-Pantalla Principal:
+
+![alt text](https://github.com/prudenpalomares/buscaproducto/blob/master/app/src/main/java/com/colo/buscaproducto/imgs/MainShot.JPG)
+
+-Muestra de Fichero de Categorías:
+
+
+![alt text](https://github.com/prudenpalomares/buscaproducto/blob/master/app/src/main/java/com/colo/buscaproducto/imgs/MostraCat1.JPG)
 
 # UMLS:
 
